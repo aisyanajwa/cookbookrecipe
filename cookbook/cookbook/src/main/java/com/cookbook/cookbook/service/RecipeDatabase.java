@@ -29,12 +29,43 @@ public class RecipeDatabase implements Searchable {
     @Override
     public ArrayList<Recipe> searchByIncludedIngredients(String[] ingredients) {
         if (ingredients.length == 0) return new ArrayList<>();
-        return new ArrayList<>(recipeRepository.findByNameContainingIgnoreCase(ingredients[0]));
+        
+        // Mulai dengan resep yang mengandung bahan pertama
+        List<Recipe> result = recipeRepository.findByIngredientContaining(ingredients[0]);
+        
+        // Filter: resep harus mengandung SEMUA bahan yang diminta (AND logic)
+        for (int i = 1; i < ingredients.length; i++) {
+            List<Recipe> recipesWithIngredient = recipeRepository.findByIngredientContaining(ingredients[i]);
+            // Intersect: ambil hanya resep yang ada di kedua list
+            result.retainAll(recipesWithIngredient);
+        }
+        
+        return new ArrayList<>(result);
     }
 
     @Override
     public ArrayList<Recipe> searchByExcludedIngredients(String[] ingredients) {
-        return new ArrayList<>();
+        if (ingredients.length == 0) return getApprovedRecipes();
+        
+        // Ambil semua resep yang disetujui
+        List<Recipe> allRecipes = recipeRepository.findByStatus(RecipeStatus.APPROVED);
+        
+        // Filter: buang resep yang mengandung bahan yang dihindari
+        List<Recipe> result = allRecipes.stream()
+            .filter(recipe -> {
+                // Cek apakah resep ini mengandung bahan yang dihindari
+                for (String excludedIngredient : ingredients) {
+                    for (String recipeIngredient : recipe.getIngredients()) {
+                        if (recipeIngredient.toLowerCase().contains(excludedIngredient.toLowerCase())) {
+                            return false; // Buang resep ini
+                        }
+                    }
+                }
+                return true; // Simpan resep ini
+            })
+            .toList();
+        
+        return new ArrayList<>(result);
     }
 
     public void addRecipe(Recipe recipe) {
