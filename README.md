@@ -157,4 +157,22 @@ Front-End berjalan di:
 ```
 http://localhost:3000
 ```
+## Screenshot Aplikasi
+1. Register/Login
+<img width="1919" height="1092" alt="Screenshot 2026-01-09 063052" src="https://github.com/user-attachments/assets/2ce2988e-4af8-4ca7-8091-6cc6ee6170bf" />
+<img width="1919" height="1090" alt="Screenshot 2026-01-09 063107" src="https://github.com/user-attachments/assets/052fabf1-4bb6-4ba6-a71c-a664e8af3313" />
 
+
+2. Tampilan User
+<img width="1919" height="1094" alt="Screenshot 2026-01-09 063208" src="https://github.com/user-attachments/assets/b78be988-0383-41e0-9033-218ff0669aee" />
+<img width="1919" height="1090" alt="Screenshot 2026-01-09 063244" src="https://github.com/user-attachments/assets/12b2f1ff-343a-4676-9b21-0ef4d9e4fcc2" />
+<img width="1919" height="1089" alt="Screenshot 2026-01-09 063722" src="https://github.com/user-attachments/assets/b239da54-d7a2-4126-b670-eb3ae5255385" />
+<img width="1919" height="1108" alt="Screenshot 2026-01-09 063636" src="https://github.com/user-attachments/assets/5dff3682-fc52-416e-b40a-740c74b06da4" />
+<img width="1919" height="1091" alt="Screenshot 2026-01-09 063624" src="https://github.com/user-attachments/assets/907e2454-b8b0-4655-99fa-ba948624e994" />
+<img width="1919" height="1092" alt="Screenshot 2026-01-09 064613" src="https://github.com/user-attachments/assets/0c15e0ff-001d-49da-91c5-f6aa77b2116c" />
+<img width="1919" height="1089" alt="Screenshot 2026-01-09 064200" src="https://github.com/user-attachments/assets/64a9aeb1-a063-4302-bca5-7d90c6ea0f59" />
+<img width="1919" height="1096" alt="Screenshot 2026-01-09 064141" src="https://github.com/user-attachments/assets/23c0b9d7-cf67-4ab9-bb3f-19045c773692" />
+<img width="1919" height="1090" alt="Screenshot 2026-01-09 064102" src="https://github.com/user-attachments/assets/3c1ef091-d6fa-4129-8b93-7bfcab159904" />
+
+3. Tampilan Admin
+<img width="1919" height="1092" alt="Screenshot 2026-01-09 064613" src="https://github.com/user-attachments/assets/962f0eaf-3966-400a-a3dc-aad33bf48c26" />
