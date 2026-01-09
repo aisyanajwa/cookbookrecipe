@@ -106,7 +106,7 @@ mysql -u root -p cookbook < cookbook.sql
 Masuk ke folder backend:
 
 ```bash
-cd cookbook
+cd cookbook/cookbook
 ```
 
 Atur konfigurasi database pada file `application.properties`:
